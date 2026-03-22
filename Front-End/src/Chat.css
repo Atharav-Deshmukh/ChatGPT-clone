@@ -1,0 +1,118 @@
+/* =====================================
+   MAIN CHAT AREA
+===================================== */
+.chats {
+    max-width: 800px; /* Made slightly wider so code blocks fit better */
+    width: 100%;
+    
+    padding: 20px; 
+    padding-bottom: 120px; /* Keeps messages from hiding behind the input box */
+    
+    overflow-y: auto; /* Use auto instead of scroll so it hides when not needed */
+    scrollbar-width: none; /* Hides scrollbar for clean look */
+}
+.chats::-webkit-scrollbar {
+    display: none;
+}
+
+/* =====================================
+   USER MESSAGES
+===================================== */
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px; /* Adds breathing room between messages */
+}
+
+.userMessage {
+    background-color: #323232;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    max-width: 500px;
+    width: fit-content;
+}
+
+/* =====================================
+   AI MESSAGES
+===================================== */
+.AiDiv {
+    text-align: left;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.GPTMassage {
+    line-height: 1.6;
+}
+
+/* =====================================
+   CODE BLOCKS
+===================================== */
+
+pre code.hljs {
+    border-radius: 12px;
+    padding: 15px; /* Gives the code some breathing room inside the black box */
+    font-family: monospace;
+}
+
+.hljs {
+    border-radius: 14px;
+}
+
+/* ... keep the rest of your start-screen and suggestion-grid CSS exactly as it is! ... */
+/* Centers the welcome screen */
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    margin-top: 50px;
+}
+
+.big-logo {
+    height: 60px;
+    margin-bottom: 20px;
+    opacity: 0.8; 
+}
+
+
+
+/* Creates the 2x2 grid for the cards */
+.suggestion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 40px;
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Styles the individual cards */
+.card {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: left;
+}
+
+.card p {
+    margin: 0 0 5px 0;
+    font-weight: bold;
+    font-size: 15px;
+    color: #e2e2e2;
+}
+
+.card span {
+    font-size: 13px;
+    color: #8e8e8e;
+}
+
+.card:hover {
+    background-color: #2a2a2a;
+}

@@ -1,0 +1,168 @@
+/* =========================================
+   1. MAIN CHAT WINDOW
+========================================= */
+.chatWindow {
+   background-color: #212121;
+   height: 100vh;
+   width: 100%;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+
+   text-align: center;
+}
+
+/* =========================================
+   2. TOP NAVBAR (Kept your exact spelling!)
+========================================= */
+.navebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navebar span {
+    margin: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.userIcon {
+    background-color: #339cff;
+    color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem; /* Matched the left margin for balance */
+    cursor: pointer;
+}
+
+/* =========================================
+   3. CHAT INPUT AREA
+========================================= */
+.chatInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px; /* Gives the bottom some breathing room */
+}
+
+.InputBox {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+   flex: 1;
+   border: none;
+   outline: none;
+   background-color: rgba(255, 255, 255, 0.05);
+   color: white; /* FIXED: Now you can actually see what you type! */
+   padding: 18px 20px;
+   font-size: 1rem;
+   border-radius: 25px;
+
+   /* FIXED: Cleaned up the shadow syntax so it actually shows up */
+   box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+}
+
+#submit {
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+    right: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #b4b4b4;
+    transition: color 0.2s ease;
+}
+
+/* FIXED: Removed the broken nested comments */
+#submit:hover {
+   color: #fff;
+}
+
+/* =========================================
+   4. SMALL INFO TEXT AT BOTTOM
+========================================= */
+/* FIXED: Merged your two duplicate classes into one */
+.infoStayGPT {
+    font-size: 0.75rem; 
+    padding: 0.8rem;
+    color: #999696;
+}
+
+/* =========================================
+   5. SENDER ICON
+========================================= */
+.sender {
+    background-color: yellow;
+    color: #212121;
+    height: 30px; 
+    width: 30px; 
+    border-radius: 50%; /* 50% always makes a perfect circle */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+/* =========================================
+   6. DROPDOWN MENU
+========================================= */
+.dropDown {
+    position: absolute;
+    top: 5rem;
+    right: 2rem;
+
+    width: 220px;
+    background-color: #323232;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    text-align: left;
+    z-index: 1000;
+    color: white;
+
+    /* FIXED: Removed the comma that was breaking the shadow */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dropDownItem {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    margin: 0.2rem;
+    padding: 0.6rem;
+    border-radius: 8px; /* Smooth corners for the hover effect */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dropDownItem:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* This gives all your icons a fixed width so your text lines up perfectly! */
+.dropDownItem i {
+    width: 25px; 
+    text-align: center;
+    margin-right: 5px;
+}

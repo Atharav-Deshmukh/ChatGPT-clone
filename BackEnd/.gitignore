@@ -1,0 +1,25 @@
+# ========================
+# 1. API Keys and Secrets
+# ========================
+.env
+**/.env
+.env.local
+.env.*.local
+
+# ========================
+# 2. Node Dependencies
+# ========================
+node_modules/
+**/node_modules/
+
+# ========================
+# 3. Build outputs (Vite/React)
+# ========================
+dist/
+build/
+
+# ========================
+# 4. OS / System files
+# ========================
+.DS_Store
+Thumbs.db
